@@ -1,0 +1,9 @@
+Perguntas Frequentes:
+
+Como eu faço pra rodar o código?
+
+- Baixe o arquivo "muito-importante.html" ao clicar nele já vai executar no seu navegador (só funciona bem no pc)
+
+- Não consigo baixar daqui -> clique nele, copie o código, cole no bloco de notas salve com o final ".html" e pronto.
+
+outra dúvida? modificações? instagram -> @pancozta 
