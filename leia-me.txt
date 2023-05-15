@@ -1,9 +1,25 @@
 Perguntas Frequentes:
 
-Como eu faço pra rodar o código?
+>> Como executar o código? << 
 
-- Baixe o arquivo "muito-importante.html" ao clicar nele já vai executar no seu navegador (só funciona bem no pc)
+Literalmente você só precisa baixar o arquivo chamado "muito-importante.html" e clicar 2x nele.
 
-- Não consigo baixar daqui -> clique nele, copie o código, cole no bloco de notas salve com o final ".html" e pronto.
+Se você não conseguir baixar o arquivo diretamente no site, siga os seguintes passos alternativos:
 
-outra dúvida? modificações? instagram -> @pancozta 
+- Clique no arquivo e copie o código.
+- Abra o bloco de notas ou qualquer editor de texto.
+- Cole o código copiado no editor de texto.
+- Salve o arquivo com a extensão ".html". Por exemplo, "meu-arquivo.html".
+- Pronto! Agora você pode executar o arquivo "meu-arquivo.html" clicando 2x nele.
+
+
+>> Como fazer modificações no código? <<
+
+- Abra o arquivo "muito-importante.html" utilizando o bloco de notas. Para fazer isso, clique com o botão direito no arquivo, escolha a opção "Abrir com" e selecione o bloco de notas.
+- Com o arquivo aberto no bloco de notas, pressione as teclas "Ctrl" e "F" simultaneamente. Isso abrirá uma janela de pesquisa.
+- Na janela de pesquisa, digite o texto que você deseja modificar. Por exemplo, se você quiser alterar a pergunta "Cusinho hoje?", pesquise por "Cusinho hoje?".
+- O bloco de notas irá mostrar no código onde essa frase está localizada. Agora, você pode substituir a pergunta existente pela pergunta da sua escolha. O mesmo se aplica às alternativas de resposta.
+
+Outra dúvida?
+
+Se você tiver mais alguma dúvida ou precisar de ajuda adicional, você pode entrar em contato comigo através do Instagram. Meu usuário é @pancozta.
