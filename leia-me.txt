@@ -19,7 +19,7 @@ Se você não conseguir baixar o arquivo diretamente no site, siga os seguintes 
 - Com o arquivo aberto no bloco de notas, pressione as teclas "Ctrl" e "F" simultaneamente. Isso abrirá uma janela de pesquisa.
 - Na janela de pesquisa, digite o texto que você deseja modificar. Por exemplo, se você quiser alterar a pergunta "Cusinho hoje?", pesquise por "Cusinho hoje?".
 - O bloco de notas irá mostrar no código onde essa frase está localizada. Agora, você pode substituir a pergunta existente pela pergunta da sua escolha. O mesmo se aplica às alternativas de resposta.
-
+- para o link do video pesquise por "youtube" e altere o link entre as aspas.  ( "" <- isso são aspas)
 Outra dúvida?
 
 Se você tiver mais alguma dúvida ou precisar de ajuda adicional, você pode entrar em contato comigo através do Instagram. Meu usuário é @pancozta.
