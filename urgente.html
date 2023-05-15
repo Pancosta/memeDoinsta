@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Pergunta</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background-color: #b32ba0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        #question {
+            color: #ffffff;
+            font-size: 24px;
+            text-align: center;
+            font-family: "Comic Sans MS", "Comic Sans", cursive;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 18px;
+            font-family: "Comic Sans MS", "Comic Sans", cursive;
+            text-align: center;
+            cursor: pointer;
+            background-color: #f1ecec;
+            color: #b32ba0;
+            border: none;
+            margin: 0 10px;
+            border-radius: 5px;
+        }
+
+
+        #noContainer {
+            position: inline-block;
+            width: 25vw;
+            height: 45vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        #no {
+            position: absolute;
+            left: 52%;
+            top: 16em;
+            transform: translate(-50%, -50%);
+            transition: 0.2s;
+        }
+
+        #yes {
+            position: absolute;
+            left: 47%;
+            top: 16em;
+            transform: translate(-50%, -50%);
+            transition: 0.2s;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="question">Cusinho Hoje?</div>
+    <div id="options">
+        <div id="noContainer">
+            <button id="no" class="button">Não</button>
+            <a href="https://youtu.be/3nyjRMfyWLo"><button id="yes" class="button">Sim</button></a>
+        </div>
+    </div>
+
+    <script>
+        var noButton = document.getElementById("no");
+        var noContainer = document.getElementById("noContainer");
+
+        function moveNoButton() {
+            var containerWidth = noContainer.offsetWidth - noButton.offsetWidth;
+            var containerHeight = noContainer.offsetHeight - noButton.offsetHeight;
+
+            var newLeft = Math.random() * containerWidth;
+            var newTop = Math.random() * containerHeight;
+
+            newLeft = Math.max(newLeft, 0);
+            newLeft = Math.min(newLeft, containerWidth);
+            newTop = Math.max(newTop, 0);
+            newTop = Math.min(newTop, containerHeight);
+
+            noButton.style.transform = `translate(${newLeft}px, ${newTop}px)`;
+        }
+
+        noButton.addEventListener("mouseover", moveNoButton);
+
+        noButton.addEventListener("mouseleave", function () {
+            setTimeout(moveNoButton, 1000);
+        });
+    </script>
+</body>
+
+</html>
