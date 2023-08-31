@@ -7,70 +7,62 @@
         body {
             margin: 0;
             padding: 0;
-            height: 100vh;
-            background-color: #b32ba0;
+            min-height: 100vh;
+            background-color: red;
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
+            font-family: "Comic Sans MS", "Comic Sans", cursive;
         }
 
         #question {
             color: #ffffff;
             font-size: 24px;
             text-align: center;
-            font-family: "Comic Sans MS", "Comic Sans", cursive;
+        }
+
+        #options {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin-top: 20px;
         }
 
         .button {
             display: inline-block;
             padding: 10px 20px;
             font-size: 18px;
-            font-family: "Comic Sans MS", "Comic Sans", cursive;
             text-align: center;
             cursor: pointer;
             background-color: #f1ecec;
-            color: #b32ba0;
+            color:red;
             border: none;
-            margin: 0 10px;
+            margin: 10px;
             border-radius: 5px;
         }
 
-
         #noContainer {
-            position: inline-block;
-            width: 25vw;
-            height: 45vh;
+            width: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
-            flex-direction: column;
+            flex-direction: row;
         }
 
-        #no {
-            position: absolute;
-            left: 52%;
-            top: 16em;
-            transform: translate(-50%, -50%);
-            transition: 0.2s;
-        }
-
-        #yes {
-            position: absolute;
-            left: 47%;
-            top: 16em;
-            transform: translate(-50%, -50%);
+        #no, #yes {
             transition: 0.2s;
         }
     </style>
 </head>
 
 <body>
-    <div id="question">Cusinho Hoje?</div>
+    <div id="question">Namora comigo?</div>
     <div id="options">
         <div id="noContainer">
-            <button id="no" class="button">Não</button>
             <a href="https://youtu.be/3nyjRMfyWLo"><button id="yes" class="button">Sim</button></a>
+            <button id="no" class="button">Não</button>
         </div>
     </div>
 
@@ -79,8 +71,8 @@
         var noContainer = document.getElementById("noContainer");
 
         function moveNoButton() {
-            var containerWidth = noContainer.offsetWidth - noButton.offsetWidth;
-            var containerHeight = noContainer.offsetHeight - noButton.offsetHeight;
+            var containerWidth = (noContainer.offsetWidth - noButton.offsetWidth)*6;
+            var containerHeight = (noContainer.offsetHeight - noButton.offsetHeight)*6;
 
             var newLeft = Math.random() * containerWidth;
             var newTop = Math.random() * containerHeight;
