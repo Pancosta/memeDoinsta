@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Pergunta</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8">
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+                min-height: 100vh;
+                background-color: black;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                font-family: "Comic Sans MS", "Comic Sans", cursive;
+            }
+
+            #question {
+                color: #ffffff;
+                font-size: 36px; /* Fonte maior para celular */
+                text-align: center;
+                margin-bottom: 20px; /* Espaçamento maior entre a pergunta e os botões */
+            }
+
+            #options {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+            }
+
+            .button {
+                display: inline-block;
+                padding: 15px 30px; /* Botões maiores para celular */
+                font-size: 24px; /* Fonte maior para celular */
+                text-align: center;
+                cursor: pointer;
+                background-color: #f1ecec;
+                color: black;
+                border: none;
+                margin: 10px;
+                border-radius: 5px;
+                transition: 0.2s;
+            }
+
+            /* Movimento do botão no toque na tela */
+            .button.active {
+                animation: moveButton 1s ease infinite;
+            }
+
+            @keyframes moveButton {
+                0% {
+                    transform: translate(0, 0);
+                }
+                25% {
+                    transform: translate(10px, 10px);
+                }
+                50% {
+                    transform: translate(0, 0);
+                }
+                75% {
+                    transform: translate(-10px, -10px);
+                }
+                100% {
+                    transform: translate(0, 0);
+                }
+            }
+
+            #noContainer {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: row;
+            }
+
+            /* Estilos específicos para o botão "Não" */
+            #no {
+                background-color: #f1ecec;
+                color: black;
+                border: none;
+                border-radius: 5px;
+                padding: 15px 30px;
+                font-size: 24px;
+                text-align: center;
+                cursor: pointer;
+                transition: 0.2s;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div id="question">Namora comigo?</div>
+        <div id="options">
+            <div id="noContainer">
+                <a href="https://www.youtube.com/watch?v=har3c93pJe0"><button id="yes" class="button">Sim</button></a>
+                <button id="no" class="button">Não</button>
+            </div>
+        </div>
+
+<img src="https://i.pinimg.com/474x/13/f2/ff/13f2ff697dfcf34da54bda63f8528231.jpg" height="250" width="250">
+
+        <script>
+            var noButton = document.getElementById("no");
+
+            function moveNoButton(event) {
+                event.preventDefault();
+                var windowWidth = window.innerWidth;
+                var windowHeight = window.innerHeight;
+                var buttonWidth = noButton.offsetWidth;
+                var buttonHeight = noButton.offsetHeight;
+
+                var newLeft = Math.random() * ((windowWidth-buttonWidth)*0.3);
+                var newTop = Math.random() * ((windowHeight - buttonHeight)*0.6);
+
+                if (newLeft < 0) {
+                newLeft = 0;
+            } else if (newLeft + buttonWidth > windowWidth) {
+                newLeft = windowWidth - buttonWidth;
+            }
+
+            if (newTop < 0) {
+                newTop = 0;
+            } else if (newTop + buttonHeight > windowHeight) {
+                newTop = windowHeight - buttonHeight;
+            }
+
+                noButton.style.transform = `translate(${newLeft}px, ${newTop}px)`;
+            }
+
+            noButton.addEventListener("touchstart", function (event) {
+                moveNoButton(event);
+                noButton.classList.add("active");
+            });
+
+            noButton.addEventListener("touchend", function () {
+                noButton.classList.remove("active");
+
+                window.addEventListener("resize"), function () {
+            moveNoButton(event);
+            }});
+        </script>
+    </body>
+
+</html>
